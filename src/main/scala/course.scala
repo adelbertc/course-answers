@@ -81,15 +81,8 @@ object Exercises {
   // Performance: 1.5 marks
   // Elegance: 1 mark
   // Total: 7
-  def append[A](x: List[A], y: List[A]): List[A] = {
-    def appendAux(soFar: List[A], xs: List[A], ys: List[A]): List[A] =
-      (xs, ys) match {
-        case (Nil, Nil)       => soFar
-        case (a :: as, bs)    => appendAux(a :: soFar, as, bs)
-        case (Nil, b :: bs)   => appendAux(b :: soFar, Nil, bs)
-      }
-    reverse(appendAux(List.empty[A], x, y))
-  }
+  def append[A](x: List[A], y: List[A]): List[A] =
+    x.foldRight(y)((ele, acc) => ele :: acc)
 
   // Exercise 7
   // Relative Difficulty: 5
