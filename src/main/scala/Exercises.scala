@@ -122,34 +122,4 @@ object Exercises {
   // Total: 10
   def reverse[A](x: List[A]): List[A] =
     x.foldLeft(List.empty[A])((acc, ele) => ele :: acc)
-
-  def main(args: Array[String]): Unit = {
-    println(add(3, 5))
-    println(add(0, 8))
-    println(add(8, 0))
-    println(add(0, 0))
-
-    println(sum(List(3, 5)))
-    println(sum(List.empty[Int]))
-
-    println(length(List.fill(8)(0)))
-    println(length(List.empty[Int]))
-
-    println(map(List(1, 2, 3, 4), (x: Int) => 8))
-
-    println(filter(List(1, 2, 3, 4), (x: Int) => x % 2 == 0))
-
-    println(append(List.empty[Int], List.empty[Int]))
-    println(append(List.empty[Int], List(1, 2, 3)))
-    println(append(List(1, 2, 3), List.empty[Int]))
-    println(append(List(1, 2, 3), List(4, 5, 6)))
-
-    println(concat(List(List(1, 2, 3), List(4, 5, 6))))
-
-    println(concatMap(List(1, 2, 3), (x: Int) => List.fill(x)(x)))
-
-    println(maximum(List(5, 2, 3, 9, 1)))
-
-    println(reverse(List(1, 2, 3)))
-  }
 }
