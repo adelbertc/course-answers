@@ -111,7 +111,7 @@ object Exercises {
   def maximum(x: List[Int]): Int =
     x match {
       case Nil => throw new Exception("maximum of empty list")
-      case xs  => xs.reduce((lhs, rhs) => lhs max rhs)
+      case xs  => xs.reduce(_ max _)
     }
 
   // Exercise 10
