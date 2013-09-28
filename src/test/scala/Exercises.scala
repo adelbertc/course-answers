@@ -3,7 +3,7 @@ import org.scalacheck.Properties
 
 import Exercises._
 
-object CourseSpecification extends Properties("Course") {
+object ExercisesSpecification extends Properties("Course") {
   property("ex01 - add") = 
     forAll((x: Int, y: Int) => add(x, y) == x + y)
 
